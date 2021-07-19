@@ -24,8 +24,6 @@ def read_file(file_paths):  # ==파일 읽어오기
 
 def classify(text_Q, text_A):
     correct = True
-
-    print('\n')
     print('질문 = '+text_Q)
     print('답변 = ' + text_A)
     while correct:
@@ -37,7 +35,7 @@ def classify(text_Q, text_A):
 
     correct = True
     while correct:
-        ant_A = input("질문 요약문을 입력하세요 : ")
+        ant_A = input("답변 요약문을 입력하세요 : ")
         if ant_A != '':
             correct = False
         else:
@@ -82,6 +80,7 @@ i = int(idx)
 f.close()
 
 while True:
+    print(i,'번')
     Bpoint = classify(Qst[i], Ans[i])
     if Bpoint == False:
         break
